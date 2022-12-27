@@ -1,0 +1,5 @@
+add-migration yeterli oldu
+
+Remove-Migration -context BitkiContext
+Update-Database -Context BitkiContext
+Add-Migration Relation -context BitkiContext
