@@ -17,7 +17,7 @@ namespace BitkiDunyasi.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -139,6 +139,7 @@ namespace BitkiDunyasi.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("kullaniciYorumId"));
 
                     b.Property<string>("UserDetailsId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("bitkiId")
@@ -307,7 +308,9 @@ namespace BitkiDunyasi.Data.Migrations
                 {
                     b.HasOne("BitkiDunyasi.Models.UserDetails", "UserDetails")
                         .WithMany()
-                        .HasForeignKey("UserDetailsId");
+                        .HasForeignKey("UserDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BitkiDunyasi.Models.Bitki", "Bitki")
                         .WithMany("Usercomments")
