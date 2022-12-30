@@ -24,17 +24,17 @@ namespace BitkiDunyasi.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<UserDetails> _signInManager;
-        private readonly UserManager<UserDetails> _userManager;
-        private readonly IUserStore<UserDetails> _userStore;
-        private readonly IUserEmailStore<UserDetails> _emailStore;
+        private readonly SignInManager<UserDetail> _signInManager;
+        private readonly UserManager<UserDetail> _userManager;
+        private readonly IUserStore<UserDetail> _userStore;
+        private readonly IUserEmailStore<UserDetail> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<UserDetails> userManager,
-            IUserStore<UserDetails> userStore,
-            SignInManager<UserDetails> signInManager,
+            UserManager<UserDetail> userManager,
+            IUserStore<UserDetail> userStore,
+            SignInManager<UserDetail> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -97,7 +97,7 @@ namespace BitkiDunyasi.Areas.Identity.Pages.Account
 			[Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Şifre")]
             public string Password { get; set; }
 
             /// <summary>
@@ -105,7 +105,7 @@ namespace BitkiDunyasi.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Şifre Tekrar")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
@@ -169,27 +169,27 @@ namespace BitkiDunyasi.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private UserDetails CreateUser()
+        private UserDetail CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<UserDetails>();
+                return Activator.CreateInstance<UserDetail>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(UserDetails)}'. " +
-                    $"Ensure that '{nameof(UserDetails)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(UserDetail)}'. " +
+                    $"Ensure that '{nameof(UserDetail)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-       private IUserEmailStore<UserDetails> GetEmailStore()
+       private IUserEmailStore<UserDetail> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<UserDetails>)_userStore;
+            return (IUserEmailStore<UserDetail>)_userStore;
         }
     }
 }

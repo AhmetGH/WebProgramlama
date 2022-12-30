@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\BitkiDunyasi.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\icon.jpeg",
+      "PackagePath": "staticwebassets\\Images\\icon.jpeg"
+    },
+    {
       "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\js\\site.js",

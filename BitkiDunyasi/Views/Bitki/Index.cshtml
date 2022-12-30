@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BitkiDunyasi.Models.Bitki>
+@{
+    ViewData["Title"] = "Index";
+}
+@if (TempData["msj"] is not null)
+{
+                    <div style="color:palevioletred">@TempData["msj"]</div>
+}
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>Bitkileriniz Listeleniyor</h2>
+
+<p>
+    <a asp-action="Create">Yeni Bitki Oluştur-+</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.bitkiAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bitkiAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.aciklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resim)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BitkiID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BitkiID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BitkiID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

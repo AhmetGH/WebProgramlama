@@ -4,12 +4,17 @@ namespace BitkiDunyasi.Models
 {
 	public class Usercomment
 	{
-		[Key]
-		public int kullaniciYorumId { get; set; }
-		public String kullaniciYorumu { get; set; }
+		public int UsercommentID { get; set; }
+		public string kullaniciYorumu { get; set; }
 
 		[Required]
-		public UserDetails UserDetails { get; set; }
+		public int BitkiID { get; set; }
+		[Required]
+
+		public int BelirleyiciID { get; set; }
+
+		[Required]
+		public Belirleyici Belirleyici { get; set; }
 		[Required]
 		public Bitki Bitki { get; set; }
 	}

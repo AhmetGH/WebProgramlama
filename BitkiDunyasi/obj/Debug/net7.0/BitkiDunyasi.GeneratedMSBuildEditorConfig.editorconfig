@@ -44,12 +44,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQml0a2lcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Bitki/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQml0a2lcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Bitki/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQml0a2lcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Bitki/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQml0a2lcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ahmet/source/repos/BitkiDunyasi/BitkiDunyasi/Views/Shared/Error.cshtml]
