@@ -17,6 +17,14 @@
         },
         "runtime": {
           "BitkiDunyasi.dll": {}
+        },
+        "resources": {
+          "en/BitkiDunyasi.resources.dll": {
+            "locale": "en"
+          },
+          "tr/BitkiDunyasi.resources.dll": {
+            "locale": "tr"
+          }
         }
       },
       "Azure.Core/1.24.0": {
