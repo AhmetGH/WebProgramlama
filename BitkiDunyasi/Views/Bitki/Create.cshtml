@@ -1,9 +1,40 @@
-﻿@model BitkiDunyasi.Models.Bitki
+﻿
 
 @{
     ViewData["Title"] = "Create";
 }
 
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+}
+
+<label>Language:</label>
+<select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+</select>
+
+@model BitkiDunyasi.Models.Bitki
+
+<div asp-validation-summary="All" class="text-danger"></div>
+@{
+    string culture = "", uiculture = "";
+    if (Context.Request.QueryString.HasValue)
+    {
+        string url = Context.Request.QueryString.Value;
+        culture = Context.Request.Query["culture"];
+        uiculture = Context.Request.Query["ui-culture"];
+    }
+}
 @if (TempData["hata"] is not null)
 {
     <h5 style="color:red">@TempData["hata"]</h5>
@@ -23,7 +54,7 @@
         }
     </style>
 </head>
-<h1>Create</h1>
+<h2>@Localizer["Uyg"]</h2>
 
 <h4>Bitki</h4>
 <hr />
@@ -56,7 +87,14 @@
 <div>
     <a asp-action="Index">Listeye geri dön</a>
 </div>
-
+<script>
+    function SetCulture(selectedValue) {
+        alert(selectedValue);
+        var url = window.location.href.split('?')[0];
+        var culture = "?culture=" + selectedValue + "&ui-culture=" + selectedValue;
+        window.location.href = url + culture;
+    }
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

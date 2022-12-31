@@ -1,7 +1,10 @@
 using BitkiDunyasi.Migrations;
 using BitkiDunyasi.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +25,24 @@ builder.Services.ConfigureApplicationCookie(options =>
     // options.LoginPath=""
 });
 
-builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat
+				 .Suffix).AddDataAnnotationsLocalization();
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+	var supportedCultures = new[]
+	{
+					new CultureInfo("tr"),
+					new CultureInfo("en-US"),
+
+				};
+	options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
+	options.SupportedCultures = supportedCultures;
+	options.SupportedUICultures = supportedCultures;
+});
+
+//builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

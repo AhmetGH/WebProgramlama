@@ -7,10 +7,13 @@ namespace BitkiDunyasi.Models
 		[Key]
 	    public int BitkiID { get; set; }
 		[Required]
+		[Display(Name ="Bitki Adı Giriniz")]
 		public string bitkiAdi { get; set; }
 		[Required]
-		public string aciklama { get; set; }
-		public int Resim { get; set; }
+        [Display(Name = "Bitki İçin Açıklama Giriniz")]
+        public string aciklama { get; set; }
+        [Display(Name = "Bitki İçin Resim Ekleyiniz")]
+        public int Resim { get; set; }
 
 		public ICollection<Usercomment>? Usercomments { get; set; }
 	}

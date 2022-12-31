@@ -5,11 +5,23 @@ using Microsoft.EntityFrameworkCore;
 using System.Drawing;
 using BitkiDunyasi.Models;
 using BitkiDunyasi.Migrations;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Localization;
 
 namespace BitkiDunyasi.Controllers
 {
     public class BitkiController : Controller
     {
+
+
+        private readonly IStringLocalizer<HomeController> _localizer;
+
+        public BitkiController(IStringLocalizer<HomeController> localizer)
+        {
+            _localizer = localizer;
+        }
         ApplicationDbContext _bitkicontext = new ApplicationDbContext();
         // GET: BitkiController
         public ActionResult Index()
@@ -51,6 +63,7 @@ namespace BitkiDunyasi.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewBag.Message = _localizer["Kabul"];
                 _bitkicontext.Add(b);
                 _bitkicontext.SaveChanges();
                 TempData["msj"] = b.bitkiAdi + " adlı bitki eklendi";
