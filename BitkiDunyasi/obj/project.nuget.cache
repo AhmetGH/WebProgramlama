@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHyzCmGrzS41nzrOLaG5gRTAV2jFvAieDn2icdnk01n4TJjUD0VUsOKnPPeehz+iTbv1Z1rLOU0MkQmmsAHceg==",
+  "dgSpecHash": "Gu1aZ3ehT93yvGV9GAM94qkJ9wXxX0mbNIRdALCfbYd5/+gFJCdInqLy4lrdPdN+KfwekdAT3440ge4nFG1N0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmet\\source\\repos\\BitkiDunyasi\\BitkiDunyasi\\BitkiDunyasi.csproj",
+  "projectFilePath": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\BitkiDunyasi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmet\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

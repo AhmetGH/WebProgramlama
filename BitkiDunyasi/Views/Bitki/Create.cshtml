@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Create";
 }
+
+@if (TempData["hata"] is not null)
+{
+    <h5 style="color:red">@TempData["hata"]</h5>
+}
 <head>
     <style>
         textarea {
@@ -18,19 +23,20 @@
         }
     </style>
 </head>
+<h1>Create</h1>
 
-<h2>Bitkinizi Oluşturun</h2>
+<h4>Bitki</h4>
 <hr />
 <div class="row">
     <div class="col-md-8">
-        <form asp-action="Create">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="bitkiAdi" class="control-label"></label>
                 <input asp-for="bitkiAdi" class="form-control" />
                 <span asp-validation-for="bitkiAdi" class="text-danger"></span>
             </div>
-            <div class="form-group" >
+            <div class="form-group">
                 <label asp-for="aciklama" class="control-label"></label>
                 <textarea input asp-for="aciklama" class="form-control"> </textarea>
                 <span asp-validation-for="aciklama" class="text-danger"></span>
@@ -40,16 +46,15 @@
                 <input asp-for="Resim" class="form-control" />
                 <span asp-validation-for="Resim" class="text-danger"></span>
             </div>
-            <br />
             <div class="form-group">
-                <input type="submit" value="Bitkiyi Oluştur" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Listeye geri dön</a>
 </div>
 
 @section Scripts {

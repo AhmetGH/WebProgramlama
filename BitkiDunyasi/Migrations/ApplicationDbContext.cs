@@ -15,6 +15,7 @@ namespace BitkiDunyasi.Migrations
         public DbSet<Usercomment> Usercomments { get; set; }
         public DbSet<UserDetail> UserDetails { get; set; }
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=BitkilerDunyasi;Trusted_Connection=True;");
