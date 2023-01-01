@@ -67,10 +67,7 @@
 							}
 						}
 						<li class="nav-item">
-							<a class="nav-link " asp-area="" asp-controller="CallBitkiApi" asp-action="Index">Api ile Listele</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Bitki" asp-action="Index">Bitkileri Listele</a>
+							<a class="nav-link " asp-area="" asp-controller="CallBitkiApi" asp-action="Index">Api ile Anasayfayı Goruntule</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" asp-area="" asp-controller="Bitki" asp-action="Index">Ana Sayfa</a>
@@ -93,20 +90,26 @@
 							@RenderBody()
 						</div>
 						<!-- Pagination-->
-						
+
 					</div>
 					<!-- Side widgets-->
 					<div class="col-lg-4">
-						<p>
-							<a class="btn btn-primary" asp-controller="Bitki" asp-action="Create">Yeni Bitki Oluştur</a>
-						</p>
+						@if (User.Identity.IsAuthenticated)
+						{
+							if (User.IsInRole("Admin") || User.IsInRole("Kullanici"))
+							{
+								<p>
+									<a class="btn btn-primary" asp-controller="Bitki" asp-action="Create">Yeni Bitki Oluştur</a>
+								</p>
+							}
+						}
 						<!-- Search widget-->
 						<div class="card mb-4">
 							<div class="card-header">Bitki Arayın</div>
 							<div class="card-body">
 								<div class="input-group">
 									<input class="form-control" type="text" placeholder="Aranacak Bitkiyi giriniz" aria-label="Aranacak Bitkiyi giriniz" aria-describedby="button-search" />
-									<button class="btn btn-primary" id="button-search" type="button" >Bul</button>
+									<button class="btn btn-primary" id="button-search" type="button">Bul</button>
 								</div>
 							</div>
 						</div>

@@ -24,7 +24,7 @@
 				<div class="card-body">
 					<h5 class="card-title">@Html.DisplayFor(modelItem => item.bitkiAdi)</h5>
 					<p class="card-text">@Html.DisplayFor(modelItem => item.aciklama)</p>
-					<a href="#" class="btn btn-primary">Sayfaya Git</a>
+					<a class="btn btn-primary" asp-action="Details" asp-route-id="@item.BitkiID">Sayfaya Git</a>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,24 @@
+﻿@model BitkiDunyasi.Models.Bitki
+
+<h2>@Html.DisplayFor(model => model.bitkiAdi)</h2>
+
+<div>
+	<div class="card mb-3">
+		<img class="card-img-top" src="@Html.DisplayFor(model => model.Resim)" alt="Card image cap" width="700" height="350">
+		<div class="card-body">
+			<p class="card-text">@Html.DisplayFor(model => model.aciklama)</p>
+			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		</div>
+	</div>
+
+</div>
+<div>
+	@if (User.Identity.IsAuthenticated)
+	{
+		if (User.IsInRole("Admin"))
+		{
+			<a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.BitkiID">Bitkiyi Düzenle</a>
+		}
+	}
+	<a class="btn btn-primary" asp-action="Index">Ana Sayfaya Geri Dön</a>
+</div>

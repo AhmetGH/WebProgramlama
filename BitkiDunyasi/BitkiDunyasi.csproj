@@ -8,20 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Admin\401.cshtml" />
-    <Content Remove="Views\Admin\404.cshtml" />
-    <Content Remove="Views\Admin\500.cshtml" />
-    <Content Remove="Views\Admin\charts.cshtml" />
-    <Content Remove="Views\Admin\index.cshtml" />
-    <Content Remove="Views\Admin\layout-sidenav-light.cshtml" />
-    <Content Remove="Views\Admin\layout-static.cshtml" />
-    <Content Remove="Views\Admin\login.cshtml" />
-    <Content Remove="Views\Admin\password.cshtml" />
-    <Content Remove="Views\Admin\register.cshtml" />
-    <Content Remove="Views\Admin\tables.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.1" />
@@ -35,20 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Resources\Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Admin\401.cshtml" />
-    <None Include="Views\Admin\404.cshtml" />
-    <None Include="Views\Admin\500.cshtml" />
-    <None Include="Views\Admin\charts.cshtml" />
-    <None Include="Views\Admin\index.cshtml" />
-    <None Include="Views\Admin\layout-sidenav-light.cshtml" />
-    <None Include="Views\Admin\layout-static.cshtml" />
-    <None Include="Views\Admin\login.cshtml" />
-    <None Include="Views\Admin\password.cshtml" />
-    <None Include="Views\Admin\register.cshtml" />
-    <None Include="Views\Admin\tables.cshtml" />
   </ItemGroup>
 
 </Project>

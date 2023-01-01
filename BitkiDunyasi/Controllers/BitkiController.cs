@@ -31,7 +31,7 @@ namespace BitkiDunyasi.Controllers
             return View(bitkiler); ;
         }
 
-        /*public IActionResult Details(int? id)
+        public IActionResult Details(int? id)
         {
             //foreach (var yz in k.Bitkiler)
             //{
@@ -46,14 +46,14 @@ namespace BitkiDunyasi.Controllers
                 return View("Hata");
             }
 
-            var y = k.Bitkiler.Include(x => x.Usercomments).FirstOrDefault(x => x.BitkiID == id);
-            if (y is null)
+            var b = _bitkicontext.Bitkiler.Include(x => x.Usercomments).FirstOrDefault(x => x.BitkiID == id);
+            if (b is null)
             {
-                TempData["hata"] = "Herhangi bir yazar bulunamadı";
+                TempData["hata"] = "Herhangi bir bitki bulunamadı";
                 return View("Hata");
             }
-            return View(y);
-        }*/
+            return View(b);
+        }
 
         public IActionResult Create()
         {
