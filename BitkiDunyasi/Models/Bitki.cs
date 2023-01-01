@@ -6,12 +6,13 @@ namespace BitkiDunyasi.Models
 	{
 		[Key]
 	    public int BitkiID { get; set; }
-		[Required]
-		[Display(Name ="Bitki Adı Giriniz")]
+		[Required(ErrorMessage = "Bitki adı girmek zorunldur.")]
+		[Display(Name = "Bitki Adı Giriniz")]
 		public string bitkiAdi { get; set; }
-		[Required]
+		[Required(ErrorMessage = "Bitki için açıklama zorunludur.")]
         [Display(Name = "Bitki İçin Açıklama Giriniz")]
         public string aciklama { get; set; }
+        [Required(ErrorMessage = "Bitki için Resim eklemek zorunludur.")]
         [Display(Name = "Bitki İçin Resim Ekleyiniz")]
         public int Resim { get; set; }
 

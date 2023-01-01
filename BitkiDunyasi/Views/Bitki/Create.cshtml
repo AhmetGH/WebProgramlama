@@ -1,101 +1,103 @@
-﻿
-
-@{
-    ViewData["Title"] = "Create";
-}
-
+﻿@model BitkiDunyasi.Models.Bitki
 @using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Options
 @using Microsoft.AspNetCore.Mvc.Localization
-
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
-
 @{
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
-        .ToList();
-}
-
-<label>Language:</label>
-<select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
-</select>
-
-@model BitkiDunyasi.Models.Bitki
-
-<div asp-validation-summary="All" class="text-danger"></div>
-@{
-    string culture = "", uiculture = "";
-    if (Context.Request.QueryString.HasValue)
-    {
-        string url = Context.Request.QueryString.Value;
-        culture = Context.Request.Query["culture"];
-        uiculture = Context.Request.Query["ui-culture"];
-    }
+	ViewData["Title"] = "Bitki oluşturun";
 }
 @if (TempData["hata"] is not null)
 {
-    <h5 style="color:red">@TempData["hata"]</h5>
+	<h5 style="color:red">@TempData["hata"]</h5>
 }
 <head>
-    <style>
-        textarea {
-            width: 100%;
-            height: 150px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            font-size: 16px;
-            resize: none;
-        }
-    </style>
+	<style>
+		textarea {
+			width: 100%;
+			height: 150px;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: #f8f8f8;
+			font-size: 16px;
+			resize: none;
+		}
+	</style>
 </head>
-<h2>@Localizer["Uyg"]</h2>
 
-<h4>Bitki</h4>
+@{
+	var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+	var cultureItems = LocOptions.Value.SupportedUICultures
+		.Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+		.ToList();
+}
+
+
+<div asp-validation-summary="All" class="text-danger"></div>
+@{
+	string culture = "", uiculture = "";
+	if (Context.Request.QueryString.HasValue)
+	{
+		string url = Context.Request.QueryString.Value;
+		culture = Context.Request.Query["culture"];
+		uiculture = Context.Request.Query["ui-culture"];
+	}
+}
+
+
+
+
+<h2>@Localizer["Yeni Bir Bitki Oluşturun"]</h2>
+
 <hr />
 <div class="row">
-    <div class="col-md-8">
-        <form asp-action="Create" asp-route-culture="@culture" asp-route-ui-culture="@uiculture" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="bitkiAdi" class="control-label"></label>
-                <input asp-for="bitkiAdi" class="form-control" />
-                <span asp-validation-for="bitkiAdi" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="aciklama" class="control-label"></label>
-                <textarea input asp-for="aciklama" class="form-control"> </textarea>
-                <span asp-validation-for="aciklama" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Resim" class="control-label"></label>
-                <input asp-for="Resim" class="form-control" />
-                <span asp-validation-for="Resim" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+	<div class="col-md-8">
+		<form asp-action="Create" asp-route-culture="@culture" asp-route-ui-culture="@uiculture" method="post">
+			<div>
+				<label>@Localizer["Dil:"]</label>
+				<select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+				</select>
+			</div>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="bitkiAdi" class="control-label"></label>
+				<input asp-for="bitkiAdi" class="form-control" />
+				<span asp-validation-for="bitkiAdi" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="aciklama" class="control-label"></label>
+				<textarea input asp-for="aciklama" class="form-control"> </textarea>
+				<span asp-validation-for="aciklama" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Resim" class="control-label"></label>
+				<input asp-for="Resim" class="form-control" />
+				<span asp-validation-for="Resim" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
 </div>
 
 <div>
-    <a asp-action="Index">Listeye geri dön</a>
+	<a asp-action="Index">Listeye geri dön</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
 <script>
-    function SetCulture(selectedValue) {
-        alert(selectedValue);
-        var url = window.location.href.split('?')[0];
-        var culture = "?culture=" + selectedValue + "&ui-culture=" + selectedValue;
-        window.location.href = url + culture;
-    }
+	function SetCulture(selectedValue) {
+		alert(selectedValue);
+		var url = window.location.href.split('?')[0];
+		var culture = "?culture=" + selectedValue + "&ui-culture=" + selectedValue;
+		window.location.href = url + culture;
+	}
 </script>

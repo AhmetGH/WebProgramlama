@@ -3,7 +3,10 @@ using BitkiDunyasi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,20 +28,33 @@ builder.Services.ConfigureApplicationCookie(options =>
     // options.LoginPath=""
 });
 
-builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat
-             .Suffix).AddDataAnnotationsLocalization();
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddMvc()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+	.AddDataAnnotationsLocalization();
+
+builder.Services.AddLocalization(opt => { opt.ResourcesPath = "Resources"; });
+
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
-    {
-                     new CultureInfo("en-US"),
-                    new CultureInfo("tr"),};
+      {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("tr")
+        };
     options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-});
+    });
+    //opt.RequestCultureProviders = new List<IRequestCultureProvider>
+    //{
+    //    new QueryStringRequestCultureProvider(),
+    //    new CookieRequestCultureProvider(),
+    //    new AcceptLanguageHeaderRequestCultureProvider()
+    //};
 
-//builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -61,6 +77,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(locOptions.Value);
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

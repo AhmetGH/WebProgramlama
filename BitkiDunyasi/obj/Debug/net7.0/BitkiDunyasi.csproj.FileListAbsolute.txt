@@ -566,11 +566,8 @@ C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\scopedcss\proj
 C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.csproj.CopyComplete
 C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.genruntimeconfig.cache
 C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\ref\BitkiDunyasi.dll
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\bin\Debug\net7.0\en\BitkiDunyasi.resources.dll
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\bin\Debug\net7.0\tr\BitkiDunyasi.resources.dll
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.Models.Bitki.en.resources
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.Views.Bitki.Create.en.resources
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.Views.Bitki.Create.tr.resources
+C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\bin\Debug\net7.0\en-US\BitkiDunyasi.resources.dll
+C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.Resources.Models.Bitki.en-US.resources
 C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.csproj.GenerateResource.cache
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\en\BitkiDunyasi.resources.dll
-C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\tr\BitkiDunyasi.resources.dll
+C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\en-US\BitkiDunyasi.resources.dll
+C:\Users\ahmet\Desktop\BitkiDunyasi\BitkiDunyasi\obj\Debug\net7.0\BitkiDunyasi.Resources.Views.Bitki.Create.en-US.resources

@@ -15,11 +15,12 @@ namespace BitkiDunyasi.Controllers
     public class BitkiController : Controller
     {
 
+		private readonly ILogger<BitkiController> _logger;
+		private readonly IStringLocalizer<BitkiController> _localizer;
 
-        private readonly IStringLocalizer<HomeController> _localizer;
-
-        public BitkiController(IStringLocalizer<HomeController> localizer)
+        public BitkiController(ILogger<BitkiController> logger, IStringLocalizer<BitkiController> localizer)
         {
+            _logger = logger;
             _localizer = localizer;
         }
         ApplicationDbContext _bitkicontext = new ApplicationDbContext();
@@ -63,7 +64,6 @@ namespace BitkiDunyasi.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.Message = _localizer["Kabul"];
                 _bitkicontext.Add(b);
                 _bitkicontext.SaveChanges();
                 TempData["msj"] = b.bitkiAdi + " adlı bitki eklendi";

@@ -19,11 +19,11 @@
           "BitkiDunyasi.dll": {}
         },
         "resources": {
-          "en/BitkiDunyasi.resources.dll": {
-            "locale": "en"
+          "en-US/BitkiDunyasi.resources.dll": {
+            "locale": "en-US"
           },
-          "tr/BitkiDunyasi.resources.dll": {
-            "locale": "tr"
+          "tr-TR/BitkiDunyasi.resources.dll": {
+            "locale": "tr-TR"
           }
         }
       },
