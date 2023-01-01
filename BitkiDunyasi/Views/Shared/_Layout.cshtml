@@ -86,8 +86,66 @@
 	</header>
 	<div class="container">
 		<main role="main" class="pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="row">
+							@RenderBody()
+						</div>
+						<!-- Pagination-->
+						
+					</div>
+					<!-- Side widgets-->
+					<div class="col-lg-4">
+						<p>
+							<a class="btn btn-primary" asp-controller="Bitki" asp-action="Create">Yeni Bitki Oluştur</a>
+						</p>
+						<!-- Search widget-->
+						<div class="card mb-4">
+							<div class="card-header">Bitki Arayın</div>
+							<div class="card-body">
+								<div class="input-group">
+									<input class="form-control" type="text" placeholder="Aranacak Bitkiyi giriniz" aria-label="Aranacak Bitkiyi giriniz" aria-describedby="button-search" />
+									<button class="btn btn-primary" id="button-search" type="button" >Bul</button>
+								</div>
+							</div>
+						</div>
+						<!-- Categories widget-->
+						<div class="card mb-4">
+							<div class="card-header">Categories</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<ul class="list-unstyled mb-0">
+											<li><a href="#!">Ulmus minör Miller (Ova Karaağacı)</a></li>
+											<br />
+											<li><a href="#!">Robinia pseudoacacia  L. (Beyaz Çiçekli Yalancı Akasya)</a></li>
+											<br />
+											<li><a href="#!">Salix alba  L.  (Ak Söğüt)</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6">
+										<ul class="list-unstyled mb-0">
+											<li><a href="#!">Fraxinus angustifolia Vahl. (Sivri Meyveli Diş Budak)</a></li>
+											<br />
+											<li><a href="#!">Pyrus communis  L. (Ekili Avrupa Armut)</a></li>
+											<br />
+											<li><a href="#!">Populus alba  L. (Ak Kavak (Akça Kavak))</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Side widget-->
+						<div class="card mb-4">
+							<div class="card-header">Haydi Sende Kayıt Ol !!!</div>
+							<div class="card-body">Sizde bize katılmak için kayıt olarak bitki ekleyebilir, Bitkiler Dünyasındaki sınırsız bilgiye bizim ile birlikte katkıda bulunabilirsiniz.</div>
+						</div>
+					</div>
 
-			@RenderBody()
+				</div>
+			</div>
+
 		</main>
 	</div>
 

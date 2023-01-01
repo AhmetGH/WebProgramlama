@@ -33,9 +33,9 @@ namespace BitkiDunyasi.Controllers
 
         /*public IActionResult Details(int? id)
         {
-            //foreach (var yz in k.Yazarlar)
+            //foreach (var yz in k.Bitkiler)
             //{
-            //    if (yz.YazarID == id)
+            //    if (yz.BitkiID == id)
             //    {
             //        var y = yz;
             //    }
@@ -46,7 +46,7 @@ namespace BitkiDunyasi.Controllers
                 return View("Hata");
             }
 
-            var y = k.Yazarlar.Include(x => x.Kitaplar).FirstOrDefault(x => x.YazarID == id);
+            var y = k.Bitkiler.Include(x => x.Usercomments).FirstOrDefault(x => x.BitkiID == id);
             if (y is null)
             {
                 TempData["hata"] = "Herhangi bir yazar bulunamadı";

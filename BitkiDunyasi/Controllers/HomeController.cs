@@ -15,6 +15,7 @@ namespace BitkiDunyasi.Controllers
 
 		public IActionResult Index()
 		{
+
 			return View();
 		}
 
