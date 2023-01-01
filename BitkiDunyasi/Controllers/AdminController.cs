@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 
+
 namespace BitkiDunyasi.Controllers
 {
     [Authorize(Roles = "Admin")]
@@ -20,5 +21,6 @@ namespace BitkiDunyasi.Controllers
         {
             return View(_application.Users.ToList());
         }
+        
     }
 }

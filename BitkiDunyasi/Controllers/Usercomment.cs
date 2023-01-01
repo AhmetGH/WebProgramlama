@@ -14,7 +14,7 @@ namespace BitkiDunyasi.Controllers
     public class Usercomment : Controller
 	{
 		ApplicationDbContext _context = new ApplicationDbContext();
-		public IActionResult Create()
+		public IActionResult Createcomment()
 		{
 			ViewData["UsercommentID"] = new SelectList(_context.Bitkiler, "BitkiID", "bitkiAdi");
 			return View();
@@ -23,7 +23,7 @@ namespace BitkiDunyasi.Controllers
 		// POST
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create([Bind("UsercommentID,kullaniciYorumu,BitkiID")] Usercomment yorum)
+		public async Task<IActionResult> Createcomment([Bind("UsercommentID,kullaniciYorumu,BitkiID")] Usercomment yorum)
 		{
 			if (ModelState.IsValid)
 			{
@@ -59,54 +59,6 @@ namespace BitkiDunyasi.Controllers
 
 			return View(yorum);
 		}
-		public async Task<IActionResult> Edit(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-
-			var yorum = await _context.Usercomments.FindAsync(id);
-			if (yorum == null)
-			{
-				return NotFound();
-			}
-			ViewData["BitkiID"] = new SelectList(_context.Bitkiler, "BitkiID", "bitkiAdi", yorum.BitkiID);
-			return View(yorum);
-		}
-/*
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit(int id, [Bind("UsercommentID,kullaniciYorumu,BitkiID")] Usercomment yorum)
-		{
-			if (id != yorum.)
-			{
-				return NotFound();
-			}
-
-			if (ModelState.IsValid)
-			{
-				try
-				{
-					_context.Update(kitap);
-					await _context.SaveChangesAsync();
-				}
-				catch (DbUpdateConcurrencyException)
-				{
-					if (!KitapExists(kitap.KitapID))
-					{
-						return NotFound();
-					}
-					else
-					{
-						throw;
-					}
-				}
-				return RedirectToAction(nameof(Index));
-			}
-			ViewData["YazarID"] = new SelectList(_context.Yazarlar, "YazarID", "YazarAd", kitap.YazarID);
-			return View(kitap);
-		}
-*/
+		
 	}
 }

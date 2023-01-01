@@ -140,10 +140,16 @@
 							</div>
 						</div>
 						<!-- Side widget-->
-						<div class="card mb-4">
-							<div class="card-header">Haydi Sende Kayıt Ol !!!</div>
-							<div class="card-body">Sizde bize katılmak için kayıt olarak bitki ekleyebilir, Bitkiler Dünyasındaki sınırsız bilgiye bizim ile birlikte katkıda bulunabilirsiniz.</div>
-						</div>
+						@if (User.Identity.IsAuthenticated)
+						{		
+						}
+						else
+						{
+							<div class="card mb-4">
+								<div class="card-header">Haydi Sende Kayıt Ol !!!</div>
+								<div class="card-body">Sizde bize katılmak için kayıt olarak bitki ekleyebilir, Bitkiler Dünyasındaki sınırsız bilgiye bizim ile birlikte katkıda bulunabilirsiniz.</div>
+							</div>
+						}
 					</div>
 
 				</div>
