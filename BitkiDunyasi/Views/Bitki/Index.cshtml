@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<BitkiDunyasi.Models.Bitki>
 @{
 	ViewData["Title"] = "Index";
+
 }
 @if (TempData["msj"] is not null)
 {
@@ -19,16 +20,17 @@
 			<div class="row">
 				@foreach (var item in Model)
 				{
+
 					<div class="card" style="width: 100%;">
 						<div class="row no-gutters">
 							<div class="col-sm-5">
-								<img class="card-img" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="Suresh Dasari Card">
+								<img class="card-img" src="@item.Resim" width="600px" height="200px">
 							</div>
 							<div class="col-sm-7">
 								<div class="card-body">
 									<h5 class="card-title">@Html.DisplayFor(modelItem => item.bitkiAdi)</h5>
 									<p class="card-text">@Html.DisplayFor(modelItem => item.aciklama)</p>
-									<a href="#" class="btn btn-primary">View Profile</a>
+									<a href="#" class="btn btn-primary">Sayfaya Git</a>
 								</div>
 							</div>
 						</div>

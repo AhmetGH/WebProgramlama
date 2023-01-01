@@ -21,9 +21,6 @@
         "resources": {
           "en-US/BitkiDunyasi.resources.dll": {
             "locale": "en-US"
-          },
-          "tr-TR/BitkiDunyasi.resources.dll": {
-            "locale": "tr-TR"
           }
         }
       },

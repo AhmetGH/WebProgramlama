@@ -14,7 +14,7 @@ namespace BitkiDunyasi.Models
         public string aciklama { get; set; }
         [Required(ErrorMessage = "Bitki için Resim eklemek zorunludur.")]
         [Display(Name = "Bitki İçin Resim Ekleyiniz")]
-        public int Resim { get; set; }
+        public string Resim { get; set; }
 
 		public ICollection<Usercomment>? Usercomments { get; set; }
 	}

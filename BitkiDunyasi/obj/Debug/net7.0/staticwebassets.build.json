@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6Oe2FDU8N982ypVcKVqwqmcMFTs5X8zFjL3r+kuBB2g=",
+  "Hash": "a/2e26TurK9LVyfP6MOtq/NSaHzmMHyYz7+ASs9/yHs=",
   "Source": "BitkiDunyasi",
   "BasePath": "_content/BitkiDunyasi",
   "Mode": "Default",
@@ -1122,12 +1122,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\.jpeg",
+      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\ejder.png",
       "SourceId": "BitkiDunyasi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\",
       "BasePath": "_content/BitkiDunyasi",
-      "RelativePath": "Images/.jpeg",
+      "RelativePath": "Images/ejder.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,15 +1136,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\ejder.png"
     },
     {
-      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\bir.jpeg",
+      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\elma.png",
       "SourceId": "BitkiDunyasi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\",
       "BasePath": "_content/BitkiDunyasi",
-      "RelativePath": "Images/bir.jpeg",
+      "RelativePath": "Images/elma.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1153,7 +1153,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\bir.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\elma.png"
     },
     {
       "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\icon.jpeg",
@@ -1173,12 +1173,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\icon.jpeg"
     },
     {
-      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\iki.jpeg",
+      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\kamkat.png",
       "SourceId": "BitkiDunyasi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\",
       "BasePath": "_content/BitkiDunyasi",
-      "RelativePath": "Images/iki.jpeg",
+      "RelativePath": "Images/kamkat.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,15 +1187,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\iki.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\kamkat.png"
     },
     {
-      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\indir.jpeg",
+      "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\Images\\nane.png",
       "SourceId": "BitkiDunyasi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\",
       "BasePath": "_content/BitkiDunyasi",
-      "RelativePath": "Images/indir.jpeg",
+      "RelativePath": "Images/nane.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1204,7 +1204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\indir.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\nane.png"
     },
     {
       "Identity": "C:\\Users\\ahmet\\Desktop\\BitkiDunyasi\\BitkiDunyasi\\wwwroot\\js\\scripts.js",
